@@ -8,15 +8,21 @@ full screen android notificattion
 npm install onesignal-full-screen-notification
 ```
 
-## Usage
+## Linking
 
-```js
-import { multiply } from "onesignal-full-screen-notification";
+# Add This permission in AndroidManifest.xml
 
-// ...
+<uses-permission android:name="android.permission.VIBRATE" />
 
-const result = await multiply(3, 7);
-```
+# Add This under in application tag in AndroidManifest.xml
+
+<activity android:name="com.onesignalfullscreennotification.RideActivity" />
+<meta-data 
+  android:name="com.onesignal.NotificationServiceExtension"
+  android:value="com.onesignalfullscreennotification.NotificationServiceExtension" 
+/>
+
+https://documentation.onesignal.com/docs/react-native-sdk-setup
 
 ## Contributing
 
